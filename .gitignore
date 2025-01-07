@@ -1,0 +1,6 @@
+Fuzzer/out-phase2/
+Fuzzer/src/__pycache__/
+chipyard/
+nutshell/
+riscv-isa-sim/
+verilator/
