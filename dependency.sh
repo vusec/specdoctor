@@ -27,10 +27,12 @@ sudo apt-get install -y libgtk-3-dev
 sudo apt-get install -y python3-pip python3-dev rsync libguestfs-tools expat
 # install DTC
 sudo apt-get install -y device-tree-compiler
+# SBT
+sudo apt-get install -y sbt
 
 # install verilator
 sudo apt-get install -y autoconf
-git clone http://git.veripool.org/git/verilator
+git clone http://github.com/verilator/verilator
 cd verilator
 git checkout v4.034
 autoconf && ./configure && make -j16 && sudo make install
