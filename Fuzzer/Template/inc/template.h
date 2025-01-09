@@ -71,21 +71,9 @@
 #endif
 
 /* PLIC handle payload */
-#define plic_on                                 \
-    la a0, PLIC_PRIO;                           \
-    li t0, 1;                                   \
-    sw t0, 4(a0);                               \
-    la a0, PLIC_ENABLE;                         \
-    li t0, 2;                                   \
-    sw t0, 0(a0);                               \
-    la a0, PLIC_THR;                            \
-    li t0, 0;                                   \
-    sw t0, 0(a0);
+#define plic_on                  
 
-#define plic_off                                \
-    la a0, PLIC_ENABLE;                         \
-    li t0, 0;                                   \
-    sw t0, 0(a0);
+#define plic_off      
 
 /* Read cycle payload */
 #if TARGET == Boom
