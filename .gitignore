@@ -1,4 +1,5 @@
-Fuzzer/out-phase2/
+Fuzzer/out*
+Fuzzer/results*
 Fuzzer/src/__pycache__/
 chipyard/
 nutshell/
