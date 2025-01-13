@@ -106,30 +106,30 @@ TOPMODULE=BoomTile make CONFIG=SpecDoctorBoomConfig REPL_SEQ_MEM=
 popd
 
 # Second clone nutshell, patch
-echo "[*] setup nutshell"
+#echo "[*] setup nutshell"
 
-git clone -b ${nutshell_tag} ${nutshell_url} ${nutshell}
+#git clone -b ${nutshell_tag} ${nutshell_url} ${nutshell}
 
-pushd ${nutshell}
-git apply ${nutshell_patch}
+#pushd ${nutshell}
+#git apply ${nutshell_patch}
+#
+#git clone ${firrtl_nutshell_url} ${firrtl_nutshell}
+#pushd ${firrtl_nutshell}
+#git checkout ${firrtl_nutshell_commit}
+#git apply ${firrtl_nutshell_patch}
+#popd
 
-git clone ${firrtl_nutshell_url} ${firrtl_nutshell}
-pushd ${firrtl_nutshell}
-git checkout ${firrtl_nutshell_commit}
-git apply ${firrtl_nutshell_patch}
-popd
-
-popd 
+#popd 
 
 # compile cpu
-echo "[**] compile SpecDoctorNutShell"
+#echo "[**] compile SpecDoctorNutShell"
 
-pushd ${nutshell}
-TOPMODULE=NutCore make ./build/emu
-popd
+#pushd ${nutshell}
+#TOPMODULE=NutCore make ./build/emu
+#popd
 
 # export env variables
 echo "[*] export env variables"
 
 echo "chipyard=${chipyard}" > env.sh
-echo "nutshell=${nutshell}" >> env.sh
+#echo "nutshell=${nutshell}" >> env.sh
