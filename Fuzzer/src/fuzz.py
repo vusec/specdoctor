@@ -630,6 +630,12 @@ class SpecDoctorFuzzer:
                 dest = f'd{d}_{atk}_{com}_{ent}_{loc}_{rbi}_{"_".join(seeds)}'
                 shutil.copyfile(f'{prg}.S',
                                 f'{self.dinput}/{dest}.S')
+# ----------- PT Start
+# Save intermediate step.
+                binary = self.pre.compile(prg, atk, com, ent, 0, 1)
+                shutil.copyfile(f'{binary}',
+                                f'{self.dinput}/{dest}.elf')
+# ----------- PT End
 
                 with open(f'{self.dlog}/{dest}.log', 'w') as fd:
                     fd.write('\n'.join([f'{k}' for k in diffs]))
